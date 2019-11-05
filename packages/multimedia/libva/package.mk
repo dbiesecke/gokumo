@@ -18,6 +18,9 @@ if [ "$DISPLAYSERVER" = "x11" ]; then
 elif [ "$DISPLAYSERVER" = "weston" ]; then
   DISPLAYSERVER_LIBVA="--disable-x11 --disable-glx --enable-wayland"
   PKG_DEPENDS_TARGET="toolchain libdrm wayland"
+elif [ "$DISTRO" = "Lakka" ]; then
+  PKG_DEPENDS_TARGET="toolchain libX11 libXext libXfixes libdrm"
+  DISPLAYSERVER_LIBVA="--enable-x11 --disable-glx --enable-egl --disable-wayland"
 else
   PKG_DEPENDS_TARGET="toolchain libdrm"
   DISPLAYSERVER_LIBVA="--disable-x11 --disable-glx --disable-wayland"

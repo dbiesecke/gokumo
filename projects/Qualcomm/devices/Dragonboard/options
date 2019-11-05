@@ -88,6 +88,10 @@
   # e.g. FIRMWARE="dvb-firmware misc-firmware wlan-firmware"
     FIRMWARE="misc-firmware wlan-firmware dvb-firmware firmware-dragonboard"
 
+    if [ "$DISTRO" = "Lakka" ]; then
+      FIRMWARE="misc-firmware wlan-firmware firmware-dragonboard"
+    fi
+
   # build and install driver addons (yes / no)
     DRIVER_ADDONS_SUPPORT="yes"
 
@@ -95,6 +99,10 @@
   # for a list of additional drivers see packages/linux-driver-addons
   # Space separated list is supported,
     DRIVER_ADDONS="crazycat dvb-latest"
+
+    if [ "$DISTRO" = "Lakka" ]; then
+      DRIVER_ADDONS=""
+    fi
 
   # build with installer (yes / no)
     INSTALLER_SUPPORT="no"

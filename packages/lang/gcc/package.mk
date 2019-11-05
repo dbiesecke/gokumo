@@ -68,6 +68,9 @@ PKG_CONFIGURE_OPTS_HOST="$GCC_COMMON_CONFIGURE_OPTS \
                          --enable-clocale=gnu \
                          $GCC_OPTS"
 
+[ "$DISTRO" = "Lakka" ] &&
+  PKG_CONFIGURE_OPTS_HOST="${PKG_CONFIGURE_OPTS_HOST//--disable-libgomp/}"
+
 pre_configure_host() {
   export CXXFLAGS="$CXXFLAGS -std=gnu++98"
   unset CPP
@@ -81,6 +84,8 @@ post_make_host() {
   if [ ! "${BUILD_WITH_DEBUG}" = "yes" ]; then
     ${TARGET_PREFIX}strip $TARGET_NAME/libgcc/libgcc_s.so*
     ${TARGET_PREFIX}strip $TARGET_NAME/libstdc++-v3/src/.libs/libstdc++.so*
+    [ "$DISTRO" = "Lakka" ] &&
+      ${TARGET_PREFIX}strip $TARGET_NAME/libgomp/.libs/libgomp.so*
   fi
 }
 
@@ -133,6 +138,8 @@ makeinstall_target() {
   mkdir -p $INSTALL/usr/lib
     cp -P $PKG_BUILD/.$HOST_NAME/$TARGET_NAME/libgcc/libgcc_s.so* $INSTALL/usr/lib
     cp -P $PKG_BUILD/.$HOST_NAME/$TARGET_NAME/libstdc++-v3/src/.libs/libstdc++.so* $INSTALL/usr/lib
+    [ "$DISTRO" = "Lakka" ] &&
+      cp -P $PKG_BUILD/.$HOST_NAME/$TARGET_NAME/libgomp/.libs/libgomp.so* $INSTALL/usr/lib
 }
 
 configure_init() {

@@ -13,6 +13,9 @@ PKG_TOOLCHAIN="autotools"
 if [ "$DISPLAYSERVER" = "x11" ]; then
   PKG_DEPENDS_TARGET="toolchain libva libdrm libX11"
   DISPLAYSERVER_LIBVA="--enable-x11"
+elif [ "$DISTRO" = "Lakka" ]; then
+  PKG_DEPENDS_TARGET="toolchain libva libdrm libX11"
+  DISPLAYSERVER_LIBVA="--enable-x11"
 else
   PKG_DEPENDS_TARGET="toolchain libva libdrm"
   DISPLAYSERVER_LIBVA="--disable-x11"

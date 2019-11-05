@@ -27,7 +27,6 @@ PKG_MESON_OPTS_TARGET="-Ddri-drivers=${DRI_DRIVERS// /,} \
                        -Dgallium-omx=disabled \
                        -Dgallium-nine=false \
                        -Dgallium-opencl=disabled \
-                       -Dvulkan-drivers= \
                        -Dshader-cache=true \
                        -Dshared-glapi=true \
                        -Dopengl=true \
@@ -40,6 +39,10 @@ PKG_MESON_OPTS_TARGET="-Ddri-drivers=${DRI_DRIVERS// /,} \
                        -Dselinux=false \
                        -Dosmesa=none"
 
+if [ "$DISTRO" = "Lakka" ]; then
+  VAAPI_SUPPORT=no
+fi
+
 if [ "${DISPLAYSERVER}" = "x11" ]; then
   PKG_DEPENDS_TARGET+=" xorgproto libXext libXdamage libXfixes libXxf86vm libxcb libX11 libxshmfence libXrandr libglvnd"
   export X11_INCLUDES=
@@ -47,6 +50,10 @@ if [ "${DISPLAYSERVER}" = "x11" ]; then
 elif [ "${DISPLAYSERVER}" = "weston" ]; then
   PKG_DEPENDS_TARGET+=" wayland wayland-protocols"
   PKG_MESON_OPTS_TARGET+=" -Dplatforms=wayland,drm -Ddri3=false -Dglx=disabled -Dglvnd=false"
+elif [ "$DISTRO" = "Lakka" ]; then
+  PKG_DEPENDS_TARGET+=" glproto dri2proto dri3proto presentproto xorgproto libXext libXdamage libXfixes libXxf86vm libxcb libX11 libxshmfence xrandr systemd openssl"
+  export X11_INCLUDES=
+  PKG_MESON_OPTS_TARGET+=" -Dvulkan-drivers=intel,amd -Dplatforms=x11,drm -Ddri3=true -Dglx=dri"
 else
   PKG_MESON_OPTS_TARGET+=" -Dplatforms=drm -Ddri3=false -Dglx=disabled -Dglvnd=false"
 fi
@@ -84,4 +91,3 @@ if [ "${OPENGLES_SUPPORT}" = "yes" ]; then
 else
   PKG_MESON_OPTS_TARGET+=" -Dgles1=false -Dgles2=false"
 fi
-

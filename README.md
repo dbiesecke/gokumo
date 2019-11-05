@@ -1,19 +1,35 @@
-# LibreELEC
+# Lakka Core - The basic linux distribution to run libretro cores
 
-LibreELEC is a 'Just enough OS' Linux distribution for running the award-winning [Kodi](https://kodi.tv) software on popular mediacentre hardware. LibreELEC is a conservative fork of the popular [OpenELEC](http://openelec.tv) project with a stronger focus on pre-release testing and post-release change management. Further information on the project can be found on the [LibreELEC website](https://libreelec.tv).
+This fork of Lakka tries to keep the keep the Lakka distribution on top of the
+current LibreELEC master branch.
 
-**Issues & Support**
+It only acts as a basis to run retroarch. No cores are included and you need
+to use the core updater to get the newest cores from the build bot.
 
-Please report issues via the [LibreELEC forum: Bug Reports](https://forum.libreelec.tv/forum-35.html). Please ask support questions in the [LibreELEC forum: Help & Support](https://forum.libreelec.tv/forum-3.html) or ask a member of project staff in the #libreelec IRC channel on Freenode.
+Since we are aiming to stay nearly alligned with LibreELEC and Retroarch,
+our releases should come faster then the standard Lakka releases.
 
-**Donations**
+This fork is a bleeding edge distribution. Don't expect a ultra-stable system
+for uncommon system. Right now this distribution is only really tested under
+X86-64.
 
-Contributions towards current project funding goals can be sent via PayPal to donations@libreelec.tv
+This branch has following enhancements over the normal Lakka distribution:
+ * Based on the current LibreELEC master branch
+ * Therefore support cutting edge kernel and mesa releases
+ * Aligned release cycle with LibreELEC and retroarch
+ * Vulkan support for Intel and AMD graphic cards (KMS)
 
-**License**
+This fork tries not to introduce any new code and rather upstream changes if such
+changes are needed.
 
-LibreELEC original code is released under [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html).
+## Installation instructions
 
-**Copyright**
+Please refer to the Lakka website http://www.lakka.tv/get on how to setup Lakka.
 
-As LibreELEC includes code from many upstream projects it includes many copyright owners. LibreELEC makes NO claim of copyright on any upstream code. However all original LibreELEC authored code is copyright LibreELEC.tv. Patches to upstream code have the same license as the upstream project, unless specified otherwise. For a complete copyright list please checkout the source code to examine license headers. Unless expressly stated otherwise all code submitted to the LibreELEC project (in any form) is licensed under [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html) and copyright is donated to LibreELEC.tv. This approach allows the project to stay manageable in the long term by giving us freedom to maintain the code as part of the whole without the management overhead of preserving contact with every submitter, e.g. GPLv3. You are absolutely free to retain copyright. To retain copyright simply add a copyright header to each submitted code page. If you submit code that is not your own work it is your responsibility to place a header stating the copyright.
+## Support
+
+ * Please report problems to the respective upstream project.
+
+## License
+
+Same as LibreELEC and Lakka.
