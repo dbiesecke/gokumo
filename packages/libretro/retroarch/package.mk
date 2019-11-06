@@ -19,7 +19,7 @@
 ################################################################################
 
 PKG_NAME="retroarch"
-PKG_VERSION="112483e"
+PKG_VERSION="bfdc8e6"
 PKG_REV="11"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv3"
@@ -145,16 +145,7 @@ makeinstall_target() {
   sed -i -e "s/# overlay_directory =/overlay_directory =\/tmp\/overlays/" $INSTALL/etc/retroarch.cfg
   sed -i -e "s/# cheat_database_path =/cheat_database_path =\/tmp\/database\/cht/" $INSTALL/etc/retroarch.cfg
   sed -i -e "s/# menu_driver = \"rgui\"/menu_driver = \"xmb\"/" $INSTALL/etc/retroarch.cfg
-
-  # Quick menu
   echo "core_assets_directory =/storage/roms/downloads" >> $INSTALL/etc/retroarch.cfg
-  echo "quick_menu_show_undo_save_load_state = \"false\"" >> $INSTALL/etc/retroarch.cfg
-  echo "quick_menu_show_save_core_overrides = \"false\"" >> $INSTALL/etc/retroarch.cfg
-  echo "quick_menu_show_save_game_overrides = \"false\"" >> $INSTALL/etc/retroarch.cfg
-  echo "quick_menu_show_cheats = \"false\"" >> $INSTALL/etc/retroarch.cfg
-  echo "quick_menu_show_overlays = \"false\"" >> $INSTALL/etc/retroarch.cfg
-  echo "quick_menu_show_rewind = \"false\"" >> $INSTALL/etc/retroarch.cfg
-  echo "quick_menu_show_latency = \"false\"" >> $INSTALL/etc/retroarch.cfg
   
   # Video
   sed -i -e "s/# video_windowed_fullscreen = true/video_windowed_fullscreen = false/" $INSTALL/etc/retroarch.cfg
@@ -195,26 +186,19 @@ makeinstall_target() {
 
   # Menu
   sed -i -e "s/# menu_mouse_enable = false/menu_mouse_enable = false/" $INSTALL/etc/retroarch.cfg
-  sed -i -e "s/# menu_core_enable = true/menu_core_enable = false/" $INSTALL/etc/retroarch.cfg
+  sed -i -e "s/# menu_core_enable = true/menu_core_enable = true/" $INSTALL/etc/retroarch.cfg
   sed -i -e "s/# thumbnails_directory =/thumbnails_directory = \/storage\/thumbnails/" $INSTALL/etc/retroarch.cfg
-  echo "menu_show_advanced_settings = \"false\"" >> $INSTALL/etc/retroarch.cfg
+  echo "menu_show_advanced_settings = \"true\"" >> $INSTALL/etc/retroarch.cfg
   echo "menu_wallpaper_opacity = \"1.0\"" >> $INSTALL/etc/retroarch.cfg
   echo "content_show_images = \"false\"" >> $INSTALL/etc/retroarch.cfg
   echo "content_show_music = \"false\"" >> $INSTALL/etc/retroarch.cfg
   echo "content_show_video = \"false\"" >> $INSTALL/etc/retroarch.cfg
 
   # Updater
-  if [ "$ARCH" == "arm" ]; then
-    sed -i -e "s/# core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\"/core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\/nightly\/linux\/armhf\/latest\/\"/" $INSTALL/etc/retroarch.cfg
-  fi
-  
-  echo "playlist_entry_rename = \"false\"" >> $INSTALL/etc/retroarch.cfg
-  echo "playlist_entry_remove = \"false\"" >> $INSTALL/etc/retroarch.cfg
-
-  # Generic_VK_nvidia
-  if [ "$PROJECT" == "Generic_VK_nvidia" ]; then
-    echo "video_context_driver = \"khr_display\"" >> $INSTALL/etc/retroarch.cfg
-    echo "video_driver = \"vulkan\"" >> $INSTALL/etc/retroarch.cfg
+  if [ "$ARCH" == "x86_64" ]; then 
+    sed -i -e "s/# core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\"/core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\/nightly\/linux\/x86_64\/latest\/\"/" $INSTALL/etc/retroarch.cfg
+  elif [ "$ARCH" == "arm" ]; then
+    sed -i -e "s/# core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\"/core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\/nightly\/linux\/armv7-neon-hf\/latest\/\"/" $INSTALL/etc/retroarch.cfg
   fi
 
   # Gamegirl
