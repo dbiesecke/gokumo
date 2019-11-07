@@ -200,6 +200,8 @@ makeinstall_target() {
   elif [ "$ARCH" == "arm" ]; then
     sed -i -e "s/# core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\"/core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\/nightly\/linux\/armv7-neon-hf\/latest\/\"/" $INSTALL/etc/retroarch.cfg
   fi
+  sed -i -e "s/# menu_show_online_updater = true/menu_show_online_updater = true/" $INSTALL/etc/retroarch.cfg
+  sed -i -e "s/# menu_show_core_updater = true/menu_show_core_updater = true/" $INSTALL/etc/retroarch.cfg
 
   # Gamegirl
   if [ "$PROJECT" == "RPi" ] && [ "$DEVICE" == "Gamegirl" ]; then

@@ -50,10 +50,14 @@ if [ "${DISPLAYSERVER}" = "x11" ]; then
 elif [ "${DISPLAYSERVER}" = "weston" ]; then
   PKG_DEPENDS_TARGET+=" wayland wayland-protocols"
   PKG_MESON_OPTS_TARGET+=" -Dplatforms=wayland,drm -Ddri3=false -Dglx=disabled -Dglvnd=false"
-elif [ "$DISTRO" = "Lakka" ]; then
+elif [ "${DISTRO}" = "Lakka" ]; then
+  if [ "${VULKAN}" == "mesa" ]; then
+    PKG_MESON_OPTS_TARGET+=" -Dvulkan-drivers=intel,amd"
+  fi
+
   PKG_DEPENDS_TARGET+=" glproto dri2proto dri3proto presentproto xorgproto libXext libXdamage libXfixes libXxf86vm libxcb libX11 libxshmfence xrandr systemd openssl"
   export X11_INCLUDES=
-  PKG_MESON_OPTS_TARGET+=" -Dvulkan-drivers=intel,amd -Dplatforms=x11,drm -Ddri3=true -Dglx=dri"
+  PKG_MESON_OPTS_TARGET+=" -Dplatforms=x11,drm -Ddri3=true -Dglx=dri"
 else
   PKG_MESON_OPTS_TARGET+=" -Dplatforms=drm -Ddri3=false -Dglx=disabled -Dglvnd=false"
 fi
