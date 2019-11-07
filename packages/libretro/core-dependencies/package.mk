@@ -17,7 +17,7 @@ PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
 
 if [ "$ARCH" == "x86_64" ]; then
-  PKG_DEPENDS_TARGET+=" libass libpng12 SDL SDL_net SDL2"
+  PKG_DEPENDS_TARGET+=" libpng12 SDL SDL_net SDL2"
 fi
 
 make_target() {

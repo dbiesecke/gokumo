@@ -195,9 +195,9 @@ makeinstall_target() {
   echo "content_show_video = \"false\"" >> $INSTALL/etc/retroarch.cfg
 
   # Updater
-  if [ "$ARCH" == "x86_64" ]; then 
+  if [ "$ARCH" = "x86_64" ]; then
     sed -i -e "s/# core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\"/core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\/nightly\/linux\/x86_64\/latest\/\"/" $INSTALL/etc/retroarch.cfg
-  elif [ "$ARCH" == "arm" ]; then
+  elif [ "$ARCH" = "arm" ]; then
     sed -i -e "s/# core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\"/core_updater_buildbot_url = \"http:\/\/buildbot.libretro.com\/nightly\/linux\/armv7-neon-hf\/latest\/\"/" $INSTALL/etc/retroarch.cfg
   fi
   sed -i -e "s/# menu_show_online_updater = true/menu_show_online_updater = true/" $INSTALL/etc/retroarch.cfg
