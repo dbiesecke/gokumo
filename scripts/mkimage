@@ -157,8 +157,8 @@ menuentry "Run" {
 }
 EOF
 
-  # Lakka - default = live = use medium for storage
-  if [ "$DISTRO" = "Lakka" ]; then
+  # Gokumo - default = live = use medium for storage
+  if [ "$DISTRO" = "Gokumo" ]; then
     cat << EOF > "${LE_TMP}/syslinux.cfg"
 SAY Wait for live mode to start automatically in 5 seconds...
 SAY

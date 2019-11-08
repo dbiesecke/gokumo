@@ -3,7 +3,7 @@
 source /etc/os-release
 
 # TODO Update with real URL once implemented
-MIRROR=http://le.builds.lakka.tv
+MIRROR=https://github.com/gokumo/gokumo
 
 FILE=`wget $MIRROR/${LIBREELEC_ARCH}/.index -q -O - | head -1`
 URL=$MIRROR/${LIBREELEC_ARCH}/$FILE

@@ -1,6 +1,6 @@
 ################################################################################
-#      This file is part of OpenELEC - http://www.openelec.tv
-#      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
+#      This file is part of Lakka - http://www.lakka.tv
+#      Copyright (C) 2019 Demetris Ierokipides
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -18,19 +18,18 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="Rockchip"
+PKG_NAME="Qualcomm"
 PKG_VERSION=""
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
-PKG_SITE="https://github.com/lakkatv/Lakka"
+PKG_SITE="https://github.com/gokumo/gokumo"
 PKG_URL=""
 PKG_DEPENDS_TARGET="retroarch "
 PKG_PRIORITY="optional"
 PKG_SECTION="virtual"
-PKG_SHORTDESC="Lakka metapackage for Rockchip"
+PKG_SHORTDESC="Gokumo metapackage for Qualcomm"
 PKG_LONGDESC=""
 
 PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
-

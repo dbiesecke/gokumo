@@ -18,26 +18,19 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="lakka-update"
-PKG_VERSION="0"
+PKG_NAME="Generic"
+PKG_VERSION=""
+PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
-PKG_DEPENDS_TARGET="toolchain"
+PKG_SITE="https://github.com/gokumo/gokumo"
+PKG_URL=""
+PKG_DEPENDS_TARGET="retroarch wii-u-gc-adapter"
 PKG_PRIORITY="optional"
-PKG_SECTION="lakka"
-PKG_SHORTDESC="Shell script to wget the latest update"
-PKG_LONGDESC="Shell script to wget the latest update"
-PKG_TOOLCHAIN="manual"
+PKG_SECTION="virtual"
+PKG_SHORTDESC="Gokumo metapackage for Generic"
+PKG_LONGDESC=""
 
 PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
 
-make_target() {
-  :
-}
-
-makeinstall_target() {
-  mkdir -p $INSTALL/usr/bin
-    cp lakka-update.sh $INSTALL/usr/bin/lakka-update
-    chmod +x $INSTALL/usr/bin/lakka-update
-}

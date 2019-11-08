@@ -58,7 +58,7 @@ PKG_CMAKE_OPTS_TARGET="-DSDL_STATIC=ON \
                        -DRPATH=OFF \
                        -DRENDER_D3D=OFF"
 
-if [ "$DISTRO" = "Lakka" ]; then
+if [ "$DISTRO" = "Gokumo" ]; then
   PKG_CMAKE_OPTS_TARGET="${PKG_CMAKE_OPTS_TARGET//-DSDL_STATIC=ON/} --DSDL_STATIC=OFF"
   PKG_CMAKE_OPTS_TARGET="${PKG_CMAKE_OPTS_TARGET//-DSDL_SHARED=OFF/} --DSDL_SHARED=ON"
 fi

@@ -39,7 +39,7 @@ PKG_MESON_OPTS_TARGET="-Ddri-drivers=${DRI_DRIVERS// /,} \
                        -Dselinux=false \
                        -Dosmesa=none"
 
-if [ "$DISTRO" = "Lakka" ]; then
+if [ "$DISTRO" = "Gokumo" ]; then
   VAAPI_SUPPORT=no
 fi
 
@@ -50,7 +50,7 @@ if [ "${DISPLAYSERVER}" = "x11" ]; then
 elif [ "${DISPLAYSERVER}" = "weston" ]; then
   PKG_DEPENDS_TARGET+=" wayland wayland-protocols"
   PKG_MESON_OPTS_TARGET+=" -Dplatforms=wayland,drm -Ddri3=false -Dglx=disabled -Dglvnd=false"
-elif [ "${DISTRO}" = "Lakka" ]; then
+elif [ "${DISTRO}" = "Gokumo" ]; then
   if [ "${VULKAN}" == "mesa" ]; then
     PKG_MESON_OPTS_TARGET+=" -Dvulkan-drivers=intel,amd"
   fi

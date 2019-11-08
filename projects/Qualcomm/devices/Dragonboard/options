@@ -88,7 +88,7 @@
   # e.g. FIRMWARE="dvb-firmware misc-firmware wlan-firmware"
     FIRMWARE="misc-firmware wlan-firmware dvb-firmware firmware-dragonboard"
 
-    if [ "$DISTRO" = "Lakka" ]; then
+    if [ "$DISTRO" = "Gokumo" ]; then
       FIRMWARE="misc-firmware wlan-firmware firmware-dragonboard"
     fi
 
@@ -100,7 +100,7 @@
   # Space separated list is supported,
     DRIVER_ADDONS="crazycat dvb-latest"
 
-    if [ "$DISTRO" = "Lakka" ]; then
+    if [ "$DISTRO" = "Gokumo" ]; then
       DRIVER_ADDONS=""
     fi
 

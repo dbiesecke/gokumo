@@ -60,14 +60,14 @@
     OPENGLES="no"
 
   # Vulkan implementation to use (no / mesa)
-    if [ "$DISTRO" = "Lakka" ]; then
+    if [ "$DISTRO" = "Gokumo" ]; then
       VULKAN="mesa"
     fi
 
   # Displayserver to use (x11 / no)
     DISPLAYSERVER="x11"
 
-    if [ "$DISTRO" = "Lakka" ]; then
+    if [ "$DISTRO" = "Gokumo" ]; then
       DISPLAYSERVER="no"
     fi
 
@@ -79,7 +79,7 @@
   # e.g. FIRMWARE="dvb-firmware misc-firmware wlan-firmware"
     FIRMWARE="misc-firmware wlan-firmware dvb-firmware iwlwifi-firmware"
 
-    if [ "$DISTRO" = "Lakka" ]; then
+    if [ "$DISTRO" = "Gokumo" ]; then
       FIRMWARE="misc-firmware wlan-firmware iwlwifi-firmware"
     fi
 
@@ -97,7 +97,7 @@
   # Space separated list is supported,
     DRIVER_ADDONS="crazycat digital_devices dvb-latest"
 
-    if [ "$DISTRO" = "Lakka" ]; then
+    if [ "$DISTRO" = "Gokumo" ]; then
       DRIVER_ADDONS=""
     fi
 

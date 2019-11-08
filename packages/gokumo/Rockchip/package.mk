@@ -18,17 +18,17 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="Generic"
+PKG_NAME="Rockchip"
 PKG_VERSION=""
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
-PKG_SITE="https://github.com/lakkatv/Lakka"
+PKG_SITE="https://github.com/gokumo/gokumo"
 PKG_URL=""
-PKG_DEPENDS_TARGET="retroarch wii-u-gc-adapter"
+PKG_DEPENDS_TARGET="retroarch "
 PKG_PRIORITY="optional"
 PKG_SECTION="virtual"
-PKG_SHORTDESC="Lakka metapackage for Generic"
+PKG_SHORTDESC="Gokumo metapackage for Rockchip"
 PKG_LONGDESC=""
 
 PKG_IS_ADDON="no"

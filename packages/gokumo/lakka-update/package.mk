@@ -1,6 +1,6 @@
 ################################################################################
-#      This file is part of Lakka - http://www.lakka.tv
-#      Copyright (C) 2019 Demetris Ierokipides
+#      This file is part of OpenELEC - http://www.openelec.tv
+#      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -18,18 +18,26 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="Qualcomm"
-PKG_VERSION=""
-PKG_REV="1"
+PKG_NAME="gokumo-update"
+PKG_VERSION="0"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
-PKG_SITE="https://github.com/libretro/Lakka-LibreELEC"
-PKG_URL=""
-PKG_DEPENDS_TARGET="retroarch "
+PKG_DEPENDS_TARGET="toolchain"
 PKG_PRIORITY="optional"
-PKG_SECTION="virtual"
-PKG_SHORTDESC="Lakka metapackage for Qualcomm"
-PKG_LONGDESC=""
+PKG_SECTION="gokumo"
+PKG_SHORTDESC="Shell script to wget the latest update"
+PKG_LONGDESC="Shell script to wget the latest update"
+PKG_TOOLCHAIN="manual"
 
 PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
+
+make_target() {
+  :
+}
+
+makeinstall_target() {
+  mkdir -p $INSTALL/usr/bin
+    cp gokumo-update.sh $INSTALL/usr/bin/gokumo-update
+    chmod +x $INSTALL/usr/bin/gokumo-update
+}

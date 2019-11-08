@@ -63,7 +63,7 @@
   # Space separated list is supported,
     DRIVER_ADDONS="crazycat dvb-latest"
 
-    if [ "$DISTRO" = "Lakka" ]; then
+    if [ "$DISTRO" = "Gokumo" ]; then
       DRIVER_ADDONS=""
     fi
 

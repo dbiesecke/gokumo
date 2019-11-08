@@ -18,19 +18,37 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="Allwinner"
+PKG_NAME="RPi"
 PKG_VERSION=""
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
-PKG_SITE="https://github.com/lakkatv/Lakka"
+PKG_SITE="https://github.com/gokumo/gokumo"
 PKG_URL=""
-PKG_DEPENDS_TARGET="retroarch"
+PKG_DEPENDS_TARGET="retroarch "
+
+if [ "$DEVICE" = "RPi" -o "$DEVICE" = "RPi2" ] ; then
+  PKG_DEPENDS_TARGET+=" wii-u-gc-adapter wiringPi"
+fi
+
+if [ "$DEVICE" = "Gamegirl" ]; then
+  PKG_DEPENDS_TARGET+=" gamegirl-joypad"
+fi
+
+if [ "$DEVICE" = "GPICase" ]; then
+  PKG_DEPENDS_TARGET+=" gpicase-safeshutdown"
+fi
+
 PKG_PRIORITY="optional"
 PKG_SECTION="virtual"
-PKG_SHORTDESC="Lakka metapackage for Allwinner"
+PKG_SHORTDESC="Gokumo metapackage for RPi devices"
 PKG_LONGDESC=""
 
 PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
 
+post_install() {
+  if [ "$DEVICE" = "GPICase" ]; then
+    enable_service disable-hdmi.service
+  fi
+}

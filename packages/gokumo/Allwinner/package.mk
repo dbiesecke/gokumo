@@ -18,18 +18,19 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="Amlogic"
+PKG_NAME="Allwinner"
 PKG_VERSION=""
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
-PKG_SITE="https://github.com/libretro/Lakka-LibreELEC"
+PKG_SITE="https://github.com/gokumo/gokumo"
 PKG_URL=""
 PKG_DEPENDS_TARGET="retroarch"
 PKG_PRIORITY="optional"
 PKG_SECTION="virtual"
-PKG_SHORTDESC="Lakka metapackage for Amlogic devices"
+PKG_SHORTDESC="Gokumo metapackage for Allwinner"
 PKG_LONGDESC=""
 
 PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
+

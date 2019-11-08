@@ -48,7 +48,7 @@ listcontains "${GRAPHIC_DRIVERS}" "freedreno" &&
 listcontains "${GRAPHIC_DRIVERS}" "etnaviv" &&
   PKG_MESON_OPTS_TARGET+=" -Detnaviv=true" || PKG_MESON_OPTS_TARGET+=" -Detnaviv=false"
 
-[ "$DISTRO" = "Lakka" ] &&
+[ "$DISTRO" = "Gokumo" ] &&
   PKG_MESON_OPTS_TARGET="${PKG_MESON_OPTS_TARGET//-Dlibkms=false/}"
 
 post_makeinstall_target() {

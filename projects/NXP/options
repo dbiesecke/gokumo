@@ -68,7 +68,7 @@
   # e.g. FIRMWARE="dvb-firmware misc-firmware wlan-firmware"
     FIRMWARE="misc-firmware wlan-firmware dvb-firmware brcmfmac_sdio-firmware-imx firmware-imx"
 
-    if [ "$DISTRO" = "Lakka" ]; then
+    if [ "$DISTRO" = "Gokumo" ]; then
       FIRMWARE="misc-firmware wlan-firmware brcmfmac_sdio-firmware-imx firmware-imx"
     fi
 

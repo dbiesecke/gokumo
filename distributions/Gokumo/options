@@ -8,20 +8,20 @@
   HARDENING_SUPPORT="no"
 
 # Name of the Distro to build (full name, without special characters)
-  DISTRONAME="Lakka"
+  DISTRONAME="Gokumo"
 
 # short project description
-  DESCRIPTION="The DIY retro emulation console"
+  DESCRIPTION="Just LibreELEC and RetroArch"
 
 # Welcome Message for e.g. SSH Server (up to 5 Lines)
   GREETING0="###########################################"
-  GREETING1="# Lakka - The DIY retro emulation console #"
-  GREETING2="# ...... visit http://www.lakka.tv ...... #"
+  GREETING1="# Gokumo - The DIY retro emulation console #"
+  GREETING2="# visit https://github.com/gokumo/gokumo  #"
   GREETING3="###########################################"
   GREETING4=""
 
 # Root password to integrate in the target system
-  ROOT_PASSWORD="lakka"
+  ROOT_PASSWORD="gokumo"
 
 # Install glibc locales to the build (yes / no)
   GLIBC_LOCALES="yes"
@@ -163,9 +163,9 @@
 # IR remote keymaps supported in default config
 # IR_REMOTE_KEYMAPS="rc6_mce xbox_360 xbox_one"
 
-  LAKKA_MIRROR="http://sources.lakka.tv"
+  LAKKA_MIRROR="https://github.com/gokumo/gokumo"
 
-  DISTRO_WEBSITE="https://www.lakka.tv/"
+  DISTRO_WEBSITE="https://github.com/gokumo/gokumo"
 
 # PINN group for the distro
   DISTRO_PINN_GROUP="Games"
