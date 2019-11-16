@@ -1,20 +1,22 @@
 # Gokumo - Just LibreELEC and RetroArch
 
-This fork of Lakka tries to keep the keep the Gokumo distribution on top of the
+This fork of Lakka tries to keep the keep the Lakka distribution on top of the
 current LibreELEC master branch.
 
-It only acts as a basis to run retroarch. No cores are included and you need
-to use the core updater to get the newest cores from the build bot.
+To not cause to many confusions for the user, we changed the name of the
+fork to "Gokumo".
 
-Since we are aiming to stay nearly alligned with LibreELEC and Retroarch,
-our releases should come faster then the standard Gokumo releases.
+This distribution only acts as a basis to run retroarch. No cores are included
+and you need to use the core updater to get the newest cores from the build bot.
 
 This fork is a bleeding edge distribution. Don't expect a ultra-stable system
 for uncommon system. Right now this distribution is only really tested under
-x86_64. Every ARMv7 + NEON compatible board supported by LibreELEC should
-also work (RPi2/3/4), but are not tested well. Since the cores are provided
-by the libretro buildbot, some cores might missing and x64_86 is definitly
-the best supported platform.
+x86_64, Rpi 2/3 and Rpi 4.
+The cores provided by the standard libretro build bot should be compatible
+with this distribution. We tried to made sure to include every dependency.
+
+We are currently building our own build pipeline using Github actions to provide
+cores that may not be provided by the libretro code [Core repository](https://github.com/gokumo/gokumo).
 
 This branch has following enhancements over the normal Gokumo distribution:
  * Based on the current LibreELEC master branch
@@ -27,8 +29,8 @@ changes are needed.
 
 ## Installation instructions
 
-Please visit out Github repository https://github.com/gokumo/gokumo on how to
-setup Gokumo [TODO].
+Right now the installation process it the same as Lakka. Nearly all Lakka
+documentation should apply to Gokumo.
 
 ## Support
 
