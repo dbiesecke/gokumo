@@ -18,7 +18,7 @@
 #  http://www.gnu.org/copyleft/gpl.html
 ################################################################################
 
-PKG_NAME="gokumo-update"
+PKG_NAME="lakka-update"
 PKG_VERSION="0"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
@@ -38,6 +38,6 @@ make_target() {
 
 makeinstall_target() {
   mkdir -p $INSTALL/usr/bin
-    cp gokumo-update.sh $INSTALL/usr/bin/gokumo-update
-    chmod +x $INSTALL/usr/bin/gokumo-update
+    cp lakka-update.sh $INSTALL/usr/bin/lakka-update
+    chmod +x $INSTALL/usr/bin/lakka-update
 }

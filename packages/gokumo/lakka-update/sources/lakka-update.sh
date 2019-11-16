@@ -5,6 +5,7 @@ source /etc/os-release
 # TODO Update with real URL once implemented
 MIRROR=https://github.com/gokumo/gokumo
 
+# TODO Get TARGET
 FILE=`wget $MIRROR/${LIBREELEC_ARCH}/.index -q -O - | head -1`
 URL=$MIRROR/${LIBREELEC_ARCH}/$FILE
 
