@@ -19,7 +19,7 @@
 ################################################################################
 
 PKG_NAME="retroarch"
-PKG_VERSION="bfdc8e6"
+PKG_VERSION="9b192dc"
 PKG_REV="11"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv3"
