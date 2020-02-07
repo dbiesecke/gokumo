@@ -8,14 +8,14 @@
   HARDENING_SUPPORT="no"
 
 # Name of the Distro to build (full name, without special characters)
-  DISTRONAME="Gokumo"
+  DISTRONAME="Buchclub"
 
 # short project description
   DESCRIPTION="Just LibreELEC and RetroArch"
 
 # Welcome Message for e.g. SSH Server (up to 5 Lines)
   GREETING0="###########################################"
-  GREETING1="# Gokumo - The DIY retro emulation console #"
+  GREETING1="# Buchclub - The DIY retro emulation console #"
   GREETING2="# visit https://github.com/gokumo/gokumo  #"
   GREETING3="###########################################"
   GREETING4=""
@@ -27,7 +27,7 @@
   GLIBC_LOCALES="yes"
 
 # Mediacenter to use (kodi / no)
-  MEDIACENTER="no"
+  MEDIACENTER="kodi"
 
 # additional drivers to install:
 # for a list of additional drivers see packages/linux-drivers
@@ -85,7 +85,7 @@
   JOYSTICK_SUPPORT="yes"
 
 # build and install CEC adapter support (yes / no)
-# CEC_SUPPORT="yes"
+  CEC_SUPPORT="yes"
 
 # build and install CEC framework support (yes / no)
   CEC_FRAMEWORK_SUPPORT="no"
@@ -144,8 +144,8 @@
 
 # Configure debug groups (space delimited key=value pairs, with each value comma-delimited) and default group when DEBUG=yes
 # Use ! or - prefix to prevent a dependent package from being built with debug. Add + suffix to build dependenencies with debug.
-  DEBUG_GROUPS="retroarch+=retroarch+,!mesa"
-  DEBUG_GROUP_YES="retroarch+"
+#  DEBUG_GROUPS="retroarch+=retroarch+,!mesa"
+#  DEBUG_GROUP_YES="retroarch+"
 
 # Default supported get handlers (archive, git, file etc.)
   GET_HANDLER_SUPPORT="archive git"

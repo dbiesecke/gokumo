@@ -5,7 +5,7 @@
     <category id="gamesgeneral">
       <group id="1">
         <setting id="gamesgeneral.enablerewind">
-          <default>false</default>
+          <default>true</default>
         </setting>
       </group>
     </category>

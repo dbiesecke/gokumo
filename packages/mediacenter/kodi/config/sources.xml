@@ -1,31 +1,74 @@
 <sources>
+  <programs>
+    <default pathversion="1" />
+  </programs>
   <video>
-      <default pathversion="1"></default>
-      <source>
-          <name>Videos</name>
-          <path pathversion="1">/storage/videos/</path>
-          <allowsharing>true</allowsharing>
-      </source>
-      <source>
-          <name>TV Shows</name>
-          <path pathversion="1">/storage/tvshows/</path>
-          <allowsharing>true</allowsharing>
-      </source>
+    <default pathversion="1" />
+    <source>
+      <name>HiDrive Movies</name>
+      <path pathversion="1">davs://nmc-gast:nmckdg123@webdav.hidrive.strato.com:443/public/MOViES/</path>
+      <thumbnail pathversion="1">https://images-eu.ssl-images-amazon.com/images/I/61LNUuPqDpL.png</thumbnail>    
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>HiDrive TV</name>
+      <path pathversion="1">davs://nmc-gast:nmckdg123@webdav.hidrive.strato.com:443/public/TV/</path>
+      <thumbnail pathversion="1">https://images-eu.ssl-images-amazon.com/images/I/61LNUuPqDpL.png</thumbnail>   
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>HiDrive Strms</name>
+      <path pathversion="1">davs://nmc-gast:nmckdg123@webdav.hidrive.strato.com:443/public/strms/</path>
+      <thumbnail pathversion="1">https://images-eu.ssl-images-amazon.com/images/I/61LNUuPqDpL.png</thumbnail>     
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>Profile</name>
+      <path pathversion="1">special://profile/</path>
+      <thumbnail pathversion="1">https://images-eu.ssl-images-amazon.com/images/I/61LNUuPqDpL.png</thumbnail>
+      <allowsharing>true</allowsharing>
+    </source>    
   </video>
   <music>
-      <default pathversion="1"></default>
-      <source>
-          <name>Music</name>
-          <path pathversion="1">/storage/music/</path>
-          <allowsharing>true</allowsharing>
-      </source>
+    <default pathversion="1" />
+    <source>
+      <name>HiDrive</name>
+      <path pathversion="1">davs://nmc-gast:nmckdg123@webdav.hidrive.strato.com:443/public/Musik/</path>
+      <allowsharing>true</allowsharing>
+    </source>
   </music>
   <pictures>
-      <default pathversion="1"></default>
-      <source>
-          <name>Pictures</name>
-          <path pathversion="1">/storage/pictures/</path>
-          <allowsharing>true</allowsharing>
-      </source>
+    <default pathversion="1" />
   </pictures>
+  <files>
+    <default pathversion="1">source</default>
+    <source>
+      <name>HiDrive XBMC</name>
+      <path pathversion="1">davs://nmc-gast:nmckdg123@webdav.hidrive.strato.com:443/public/XBMC/</path>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>Androidtvgeek Repo</name>
+      <path pathversion="1">http://repository.androidtvgeek.com/zips/</path>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>KDC Germany (XStream)</name>
+      <path pathversion="1">https://kdc-repo.website/repo-beta/</path>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>HiDrive playlist</name>
+      <path pathversion="1">davs://nmc-gast:nmckdg123@webdav.hidrive.strato.com:443/public/playlist/</path>
+      <allowsharing>true</allowsharing>
+    </source>
+  </files>
+  <games>
+    <default pathversion="1" />
+    <source>
+      <name>ROMS</name>
+      <path pathversion="1">/storage/roms/</path>
+      <allowsharing>true</allowsharing>
+    </source>
+  </games>
 </sources>
